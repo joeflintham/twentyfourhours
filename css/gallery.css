@@ -1,0 +1,158 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html, body{
+height:100%;	
+}
+
+#wrapper{
+min-height: 100%;
+}
+
+#push{
+height:3px;
+width:100%;
+
+}
+
+@media only screen and (min-width: 960px) and (max-width: 3000px) {
+
+
+section{
+	width:960px;
+	margin: 10% auto;
+	position: relative;
+}
+
+#desktop ul li{ 
+	float:left;
+	margin:13px;
+}
+
+.imageHolder{
+border:10px solid #a1a1a1;
+}
+
+#desktop ul li img{
+ width:260px !important;
+ height:260px !important;
+ margin:3px;
+}
+
+footer{
+	position: relative;
+	margin-top: -50px; /* negative value of footer height */
+	height: 50px;
+	clear:both;	
+}
+
+}
+
+@media only screen and (min-width:659px) and (max-width: 959px) {
+
+
+section{
+	width:659px;
+	margin: 5% auto;
+	position: relative;
+}
+
+
+#desktop ul li{ 
+	float:left;
+	margin:40px;
+}
+
+.imageHolder{
+border:10px solid #a1a1a1;
+}
+
+#desktop ul li img{
+ width:220px !important;
+ width:220px !important;
+ height:auto;
+ margin:3px;
+}
+
+footer{
+	position: relative;
+	margin-top: -50px; /* negative value of footer height */
+	height: 50px;
+	clear:both;	
+}
+	
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 658px) {
+
+
+
+section{
+	width:490px;
+	margin: 5% auto;
+	position: relative;
+	overflow:auto;
+	padding-bottom: 45px;
+}
+
+
+#desktop ul li{ 
+	float:left;
+	margin: 10px 30px;
+}
+
+.imageHolder{
+border:5px solid #a1a1a1;
+}
+
+#desktop ul li img{
+ width:160px;
+ width:160px;
+ height:160px;
+ margin:2px;
+}
+
+footer{
+	position: relative;
+	margin-top: -45px; /* negative value of footer height */
+	height: 45px;
+	clear:both;	
+}
+
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+
+section{
+	width:300px;
+	height: 530px;
+	margin: 2% auto;
+	position: relative;
+}
+
+#desktop ul li{ 
+	float:left;
+	margin: 10px 15px;
+}
+
+.imageHolder{
+border:5px solid #a1a1a1;
+}
+
+#desktop ul li img{
+ width:100px !important;
+ width:100px !important;
+ height:auto;
+ margin:1px;
+}
+
+footer{
+	position: relative;
+	margin-top: -28px; /* negative value of footer height */
+	height: 28px;
+	clear:both;	
+}
+
+}

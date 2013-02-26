@@ -1,0 +1,323 @@
+@charset "UTF-8";
+/* CSS Document */
+html, body{
+height:100%;	
+}
+
+body{
+background-color:#3a3f43;
+background-image: url(../images/IMG_1.jpg); 
+	
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+background-repeat:no-repeat;
+}
+
+#wrapper{
+min-height: 100%;
+}
+
+#push{
+height:3px;
+width:100%;
+position:fixed;
+
+}
+
+@media only screen and (min-width: 801px) and (max-width: 3000px) {
+
+	
+nav{
+width:100%;
+background-color: #252525;
+text-align: center;
+z-index: 10;
+	}
+	
+	
+nav a{
+text-decoration: none;
+color: #CCC;
+font-size: 26px;
+display: inline-block;
+margin-left: 35px;
+padding: 14px 7px 16px 7px ;
+}
+
+
+
+#daytimeIcons{
+width: 100%;
+background-color: #393939;
+height:50px;
+}
+
+#daytimeIcons ul{
+max-width:420px;
+width:100%;
+margin: 0 auto;
+
+}
+
+#daytimeIcons ul li a {
+padding-top:10px;
+padding-left:15px;
+float:left;
+}
+
+#daytimeIcons ul li a img{
+width:60px !important;
+height:	35px !important;
+}
+
+#playButton{
+margin:7% auto;
+max-width:1200px;
+width:94%;
+height:290px;
+position:relative;
+}
+
+#infoDisplay{
+background-color:#999;
+opacity: 0.6;
+filter: alpha(opacity = 60); /*IE*/
+height:290px;
+max-width:1200px;
+width:100%;
+position:absolute;
+z-index:-1;
+}
+
+#text{
+position:absolute;
+margin: 30px 20px;
+color:#000;	
+font-size:150%;
+text-align: center;
+}
+
+#play{
+position: absolute; 
+bottom: 0;
+width:100%;
+max-width:1200px;
+min-height:33px;
+max-height:53px;
+}
+
+footer{
+
+width:100%;
+margin-top:1px;
+background-color: #393939;
+opacity: 0.4;
+filter: alpha(opacity = 40); /*IE*/
+bottom:0px;
+
+
+position: relative;
+margin-top: -50px; /* negative value of footer height */
+height: 50px;
+clear:both;	
+
+}
+	
+}
+
+@media only screen and (min-width:481px) and (max-width: 800px) {
+
+	
+nav{
+width:100%;
+background-color: #252525;
+text-align: center;
+z-index: 10;
+	}
+	
+	
+nav a{
+text-decoration: none;
+color: #CCC;
+font-size: 120%;
+display: inline-block;
+margin-left: 35px;
+padding: 10px 7px 10px 7px ;
+}
+
+#daytimeIcons{
+width: 100%;
+background-color: #393939;
+/*opacity: 0.9;
+filter: alpha(opacity = 90); */
+height:45px;
+}
+
+#daytimeIcons ul{
+max-width:370px;
+width:100%;
+margin: 0 auto;
+
+}
+
+#daytimeIcons ul li a {
+padding-top:5px;
+padding-left:10px;
+float:left;
+}
+
+#daytimeIcons ul li a img{
+width:40px !important;
+height:	23px !important;
+}
+	
+	
+#infoDisplay{
+background-color:#999;
+opacity: 0.6;
+filter: alpha(opacity = 60); 
+height:210px;
+width:100%;
+position:absolute;
+z-index:-1;
+}
+
+#text{
+position:absolute;
+margin: 30px 20px;
+color:#000;	
+font-size:120%;
+text-align: center;
+}
+
+#playButton{
+margin:0 3%;
+width:94%;
+height:240px;
+position:relative;
+}
+
+
+#play{
+position: absolute; 
+bottom: 0;
+width:100%;
+min-height:30px;
+max-height:50px;
+}
+
+footer{
+margin-top:1px;
+width:100%;
+background-color: #393939;
+opacity: 0.4;
+filter: alpha(opacity = 40); 
+bottom:0;	
+float:right;
+color:#CCC;
+
+position: relative;
+margin-top: -45px; /* negative value of footer height */
+height: 45px;
+clear:both;	
+}
+
+}
+
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+
+nav{
+width:100%;
+background-color: #252525;
+text-align: center;
+z-index: 10;
+}
+	
+	
+nav a{
+text-decoration: none;
+color: #CCC;
+font-size: 110.5%;
+display: inline-block;
+padding: 10px 7px 10px 7px ;
+}	
+	
+	
+#daytimeIcons{
+width: 200px;
+background-color: #393939;
+/*opacity: 0.6;
+filter: alpha(opacity = 60); */
+height:38px;
+alignment-baseline:central;
+margin: 0 auto;
+}
+
+#daytimeIcons ul{
+min-width:360px;
+width:100%;
+margin: 0 auto;
+}
+
+#daytimeIcons ul li a {
+padding-top:1.04%;
+padding-left:1.04%;
+float:left;
+}
+
+#daytimeIcons ul li a img{
+width:30px !important;
+height:	18px !important;
+}
+	
+#infoDisplay{
+background-color:#999;
+opacity: 0.9;
+filter: alpha(opacity = 90); 
+height:190px;
+width:100%;
+position:absolute;
+z-index:-1;
+}
+
+#text{
+position:absolute;
+margin: 30px 20px;
+color:#000;	
+font-size:110%;
+text-align: center;
+}
+
+#playButton{
+margin:1px 3%;
+width:94%;
+height:190px;
+position:relative;
+}
+
+#play{
+position: absolute; 
+bottom: 0;
+width:100%;
+min-height:30px;
+max-height:50px;
+}
+
+footer{
+margin-top:1px;
+width:100%;
+background-color: #393939;
+opacity: 0.4;
+filter: alpha(opacity = 40); 
+bottom:0;	
+color:#CCC;
+
+position: relative;
+margin-top: -28px; /* negative value of footer height */
+height: 28px;
+clear:both;
+}
+
+}

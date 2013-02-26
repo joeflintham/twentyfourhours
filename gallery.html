@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>24 hours at Jonos</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="css/reset_scc.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/gallery.css" type="text/css" />
+
+<!--[if !IE 7]>
+	<style type="text/css">
+		#wrapper {display:table;height:100%}
+	</style>
+<![endif]-->
+
+
+
+<!-- Add jQuery library -->
+	<script type="text/javascript" src="fancybox/lib/jquery-1.9.0.min.js"></script>
+
+	
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="fancybox/source/jquery.fancybox.js?v=2.1.4"></script>
+	<link rel="stylesheet" type="text/css" href="fancybox/source/jquery.fancybox.css?v=2.1.4" media="screen" />
+
+<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
+
+
+<script type="text/javascript">
+		$(document).ready(function() {
+			
+	    $("#single_image").fancybox({
+          helpers: {
+              title : {
+                  type : 'float'
+              }
+          }
+      });
+
+			
+	$(".various").fancybox({
+		width	: 400,
+		height	: 150,
+		fitToView	: false,
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'elastic',
+		closeEffect	: 'fade'
+	});
+	
+	$(".various1").fancybox({
+		maxWidth	: 1000,
+		maxHeight	: 600,
+		minWidth	: 300,
+		fitToView	: false,
+		width		: '70%',
+		height		: '70%',
+		autoSize	: true,
+		closeClick	: false,
+		openEffect	: 'elastic',
+		closeEffect	: 'fade'
+	});
+	
+	
+		$('.fancybox-media').fancybox({
+		openEffect  : 'none',
+		closeEffect : 'none',
+		helpers : {
+			media : {}
+		}
+	});
+	
+});
+
+</script>
+	
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+<!--
+<div id="backgroundImageList">
+	<ul>
+    	<li> <img src="images/IMG_1.jpg"/> </li>
+        <li> <img src="images/IMG_2.jpg"/> </li>
+        <li> <img src="images/IMG_3.jpg"/> </li>
+        <li> <img src="images/IMG_4.jpg"/> </li>
+        <li> <img src="images/IMG_5.jpg"/> </li>
+        <!--<li> <img src="images/backgroundImage2.jpg"/> </li>
+    </ul>
+</div> <!--end of backgroundImageList-->
+
+<nav>
+	<a href="about.html"> About </a> 
+    <a href="index.html"> Home </a> 
+    <a href="gallery.html"> Gallery </a> 
+   
+</nav>
+
+
+<section>
+
+<div id="desktop">
+
+
+<ul>
+
+<li><a id="single_image" href="images/jonofin2.jpg" title="">
+	<img src="images/photo1.jpg" alt="Pattern"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/jonosfin.jpg" title="">
+	<img src="images/photo2.jpg" alt="Pattern"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/jonowall.jpg" title="">
+	<img src="images/photo3.jpg" alt="Jono Wall"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/IMG_0398.jpg" title="Snapshots from Jono's">
+	<img src="images/photo4.jpg" alt="Jono's at night" class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/IMG_0409.jpg" title="Outside Jono's">
+	<img src="images/photo5.jpg" alt="Outside Jono's"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/IMG_0408.jpg" title="">
+	<img src="images/photo6.jpg" alt="Snooker club"  class="imageHolder"/>
+</a></li>
+
+
+<li><a class="various fancybox.iframe" data-fancybox-type="iframe" href="iframes/iframe.html">
+	<img src="images/photo2.jpg" alt="image discription"  class="imageHolder"/>
+</a></li>
+
+<li><a class="various1 fancybox.iframe" data-fancybox-type="iframe" href="iframes/iframe2.html"> 
+
+<!--<li><a class="fancybox-media" href="http://vimeo.com/36031564">-->
+
+<img src="images/video1.jpg" alt="image discription"  class="imageHolder"/>
+
+</a></li>
+	
+</ul>
+
+
+</div> <!--end of desktop-->
+
+
+</section>
+
+<div id="push"> </div>
+</div> <!--end of wrapper-->
+
+<footer>
+
+<div id="daytimeIcons">
+	<ul>
+    	<li><a href="#"> <img src="icons/icon1.png" /></a> </li>
+        <li><a href="#"> <img src="icons/icon2.png" /></a> </li>
+        <li><a href="#"> <img src="icons/icon3.png" /></a> </li>
+        <li><a href="#"> <img src="icons/icon4.png" /></a> </li>
+        <li><a href="#"> <img src="icons/icon5.png" /></a> </li>
+       <!-- <li><a href="#"> <img src="icons/icon6.png" /></a> </li> -->
+     </ul>
+
+</div><!--end of daytimeIcons -->
+	<!--<h2> <a href="#" > Click to remove contect </a> </h2> -->
+</footer>
+
+
+
+
+</body>
+</html>
