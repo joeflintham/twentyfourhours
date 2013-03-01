@@ -5,18 +5,12 @@ height:100%;
 }
 
 body{
-background-color:#3a3f43;
-background-image: url(../images/IMG_1.jpg); 
-	
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-background-repeat:no-repeat;
+    font-family: "Helvetica Neue", Arial Narrow, "sans-serif";
 }
 
 #wrapper{
 min-height: 100%;
+margin: 0 auto -50px;
 }
 
 #push{
@@ -26,13 +20,66 @@ position:fixed;
 
 }
 
+            div.backgroundImageContainer{
+	           position: absolute;
+                z-index: -1;
+	           width: 100%;
+	           height: 100%;
+            }
+            
+	       div.backgroundImagePane {
+	           position: absolute;
+	           top: 0px;
+	           left: 0px;
+	           width: 100%;
+	           height: 100%;
+	           background-size: 100%;
+	       }
+
+	       div.backgroundImagePane * {
+	           position: absolute;
+	       }
+	   
+
+            div.wrapper {
+	           position: absolute;
+                z-index: 100;
+            }
+
+            div.footer {
+	           position: absolute;
+                z-index: 100;
+            }
+            
+            div.mainLink {
+                display: inline-block; margin: 0px; padding: 0px;
+            }
+
+            div.playButton, div.pauseButton {
+                text-align: center;
+                opacity: 0;
+            }
+
+            div.pauseButton {
+                opacity: 1;
+                position: relative;
+                top: 2px;
+                left: 10px;
+            }
+            
+            div.playButton img {
+                margin: auto;
+                padding-top: 100px; 
+            }
+            
+            
 @media only screen and (min-width: 801px) and (max-width: 3000px) {
 
 	
 nav{
 width:100%;
-background-color: #252525;
-text-align: center;
+background-color: transparent;
+background-image: url(../chrome/menu_bg.png);
 z-index: 10;
 	}
 	
@@ -40,18 +87,20 @@ z-index: 10;
 nav a{
 text-decoration: none;
 color: #CCC;
-font-size: 26px;
+font-size: 1.5em;
 display: inline-block;
 margin-left: 35px;
-padding: 14px 7px 16px 7px ;
+padding: 10px 5px;
+font-weight: 300;
 }
 
 
 
 #daytimeIcons{
 width: 100%;
-background-color: #393939;
 height:50px;
+background-color: transparent;
+background-image: url(../chrome/menu_bg.png);
 }
 
 #daytimeIcons ul{
@@ -108,23 +157,19 @@ min-height:33px;
 max-height:53px;
 }
 
-footer{
+#footer {
 
 width:100%;
 margin-top:1px;
-background-color: #393939;
 opacity: 0.4;
-filter: alpha(opacity = 40); /*IE*/
 bottom:0px;
 
 
-position: relative;
-margin-top: -50px; /* negative value of footer height */
-height: 50px;
-clear:both;	
 
 }
 	
+#footer, .push {
+    height: 50px;
 }
 
 @media only screen and (min-width:481px) and (max-width: 800px) {
@@ -218,11 +263,12 @@ bottom:0;
 float:right;
 color:#CCC;
 
-position: relative;
-margin-top: -45px; /* negative value of footer height */
-height: 45px;
-clear:both;	
 }
+
+#footer, .push {
+    height: 50px;
+}
+
 
 }
 
@@ -314,10 +360,11 @@ filter: alpha(opacity = 40);
 bottom:0;	
 color:#CCC;
 
-position: relative;
-margin-top: -28px; /* negative value of footer height */
-height: 28px;
-clear:both;
 }
+
+#footer, .push {
+    height: 50px;
+}
+
 
 }

@@ -8,6 +8,18 @@
 <link rel="stylesheet" href="css/reset_scc.css" type="text/css" />
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 
+            <script>
+            
+                var dojoConfig = {
+                    async: true,
+                    packages: [{
+                        name: "24-hours",
+                        location: location.pathname.replace(/\/[^/]*$/, '') + '/js'
+                    }]
+                };
+            
+            </script>
+
 <!--[if !IE 7]>
 	<style type="text/css">
 		#wrapper {display:table;height:100%}
@@ -18,6 +30,21 @@
 </head>
 
 <body>
+
+        <div class="backgroundImageContainer" data-dojo-type="24-hours/bgImageContainer">
+        
+            <div id="bgImage1" class="backgroundImagePane" data-dojo-type="24-hours/bgImage" imgSrc="bgImages/IMG_1.jpg" imgAlt="An image of Jono's Snooker Club"></div>
+    
+            <div id="bgImage2" class="backgroundImagePane" data-dojo-type="24-hours/bgImage" imgSrc="bgImages/IMG_2.jpg" imgAlt="An image of Jono's Snooker Club"></div>
+            
+            <div id="bgImage3" class="backgroundImagePane" data-dojo-type="24-hours/bgImage" imgSrc="bgImages/IMG_3.jpg" imgAlt="An image of Jono's Snooker Club"></div>
+            
+            <div id="bgImage4" class="backgroundImagePane" data-dojo-type="24-hours/bgImage" imgSrc="bgImages/IMG_4.jpg" imgAlt="An image of Jono's Snooker Club"></div>
+            
+            <div id="bgImage5" class="backgroundImagePane" data-dojo-type="24-hours/bgImage" imgSrc="bgImages/IMG_5.jpg" imgAlt="An image of Jono's Snooker Club"></div>
+    
+        </div>        
+
 <div id="wrapper">
 
 <!--
@@ -33,27 +60,15 @@
 </div> <!--end of backgroundImageList-->
 
 <nav>
-	<a href="about.html"> About </a> 
-    <a href="index.html"> Home </a> 
-    <a href="gallery.html"> Gallery </a> 
-   
+    <div class="mainLink" data-dojo-type="24-hours/mainLink" data-dojo-props="linkName:'Home'"></div> 
+    <div class="mainLink" data-dojo-type="24-hours/mainLink" data-dojo-props="linkName:'About'"></div> 
+    <div class="mainLink" data-dojo-type="24-hours/mainLink" data-dojo-props="linkName:'Gallery'"></div>    
+    <div class="mainLink pauseButton" id="pauseButtonContainer"/>
 </nav>
 
+<div class="audioController" data-dojo-type="24-hours/audioController" data-dojo-props="audiosrc: 'media/jonos-final.mp3'"></div>
 
-
-<div id="playButton">
-	<div id="infoDisplay">
-    </div><!-- end of infoDisplay -->
-    	<div id="text">
-    		<h1> Welcome </h1>
-        	<h1> 24 Hours At Jono's</h1>
-        	<h2> Press to begin </h2>
-         </div> <!--end of text-->
-    
-		<img id="play" src="images/radioTab.png" />
-</div><!-- end of playButton -->
-
-<div id="push"> </div>
+<div class="push"></div>
 
 </div> <!--end of wrapper  -->
 
@@ -61,18 +76,28 @@
 
 <div id="daytimeIcons">
 	<ul>
-    	<li><a href="#"> <img src="icons/icon1.png" /></a> </li>
-        <li><a href="#"> <img src="icons/icon2.png" /></a> </li>
-        <li><a href="#"> <img src="icons/icon3.png" /></a> </li>
-        <li><a href="#"> <img src="icons/icon4.png" /></a> </li>
-        <li><a href="#"> <img src="icons/icon5.png" /></a> </li>
-       <!-- <li><a href="#"> <img src="icons/icon6.png" /></a> </li> -->
+    	<li><div data-dojo-type="24-hours/transitionButton" data-dojo-props="iconSrc:'icons/icon2.png', refToImage: 'bgImage1', imageCounter:'0'"></div></li>
+    	<li><div data-dojo-type="24-hours/transitionButton" data-dojo-props="iconSrc:'icons/icon3.png', refToImage: 'bgImage2', imageCounter:'1'"></div></li>
+    	<li><div data-dojo-type="24-hours/transitionButton" data-dojo-props="iconSrc:'icons/icon4.png', refToImage: 'bgImage3', imageCounter:'2'"></div></li>
+    	<li><div data-dojo-type="24-hours/transitionButton" data-dojo-props="iconSrc:'icons/icon5.png', refToImage: 'bgImage4', imageCounter:'3'"></div></li>
+    	<li><div data-dojo-type="24-hours/transitionButton" data-dojo-props="iconSrc:'icons/icon1.png', refToImage: 'bgImage5', imageCounter:'4'"></div></li>
      </ul>
 
 </div><!--end of daytimeIcons -->
 	<!--<h2> <a href="#" > Click to remove contect </a> </h2> -->
 </footer>
 
+
+
+
+		<script src="js/dojo/dojo/dojo.js"></script>
+		<script>
+			require(["dojo/parser", "dojo/ready", "24-hours/bgImage"], function(parser, ready){
+				ready(function(){
+					parser.parse();
+				});
+			});
+		</script>
 
 
 
