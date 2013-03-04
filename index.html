@@ -60,13 +60,60 @@
 </div> <!--end of backgroundImageList-->
 
 <nav>
-    <div class="mainLink" data-dojo-type="24-hours/mainLink" data-dojo-props="linkName:'Home'"></div> 
-    <div class="mainLink" data-dojo-type="24-hours/mainLink" data-dojo-props="linkName:'About'"></div> 
-    <div class="mainLink" data-dojo-type="24-hours/mainLink" data-dojo-props="linkName:'Gallery'"></div>    
+    <div class="mainLink" data-dojo-type="24-hours/mainLink" data-dojo-props="linkName:'Home', clickFunction:'loadHome'"></div> 
+    <div class="mainLink" data-dojo-type="24-hours/mainLink" data-dojo-props="linkName:'About', clickFunction:'loadAbout'"></div> 
+    <div class="mainLink" data-dojo-type="24-hours/mainLink" data-dojo-props="linkName:'Gallery', clickFunction:'loadGallery'"></div>    
     <div class="mainLink pauseButton" id="pauseButtonContainer"/>
 </nav>
 
 <div class="audioController" data-dojo-type="24-hours/audioController" data-dojo-props="audiosrc: 'media/jonos-final.mp3'"></div>
+
+<div data-dojo-type="24-hours/galleryContainer" id="gallery"> 
+<ul>
+
+<li><a id="single_image" href="images/jonofin2.jpg" title="">
+	<img src="images/photo1.jpg" alt="Pattern"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/jonosfin.jpg" title="">
+	<img src="images/photo2.jpg" alt="Pattern"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/jonowall.jpg" title="">
+	<img src="images/photo3.jpg" alt="Jono Wall"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/IMG_0398.jpg" title="Snapshots from Jono's">
+	<img src="images/photo4.jpg" alt="Jono's at night" class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/IMG_0409.jpg" title="Outside Jono's">
+	<img src="images/photo5.jpg" alt="Outside Jono's"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/IMG_0408.jpg" title="">
+	<img src="images/photo6.jpg" alt="Snooker club"  class="imageHolder"/>
+</a></li>
+
+
+<li><a class="various fancybox.iframe" data-fancybox-type="iframe" href="iframes/iframe.html">
+	<img src="images/photo2.jpg" alt="image discription"  class="imageHolder"/>
+</a></li>
+
+<li><a class="various1 fancybox.iframe" data-fancybox-type="iframe" href="iframes/iframe2.html"> 
+
+<!--<li><a class="fancybox-media" href="http://vimeo.com/36031564">-->
+
+<img src="images/video1.jpg" alt="image discription"  class="imageHolder"/>
+
+</a></li>
+	
+</ul>
+
+<br style="clear: left" />
+
+</div>
+
 
 <div class="push"></div>
 

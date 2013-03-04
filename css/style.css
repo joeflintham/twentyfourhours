@@ -1,11 +1,22 @@
-@charset "UTF-8";
-/* CSS Document */
 html, body{
 height:100%;	
 }
 
+@font-face {
+    font-family: 'vegurregular';
+    src: url('../fonts/vegur-regular-webfont.eot');
+    src: url('../fonts/vegur-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/vegur-regular-webfont.woff') format('woff'),
+         url('../fonts/vegur-regular-webfont.ttf') format('truetype'),
+         url('../fonts/vegur-regular-webfont.svg#vegurregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 body{
-    font-family: "Helvetica Neue", Arial Narrow, "sans-serif";
+    font-family: 'vegurregular';
 }
 
 #wrapper{
@@ -33,22 +44,27 @@ position:fixed;
 	           left: 0px;
 	           width: 100%;
 	           height: 100%;
-	           background-size: 100%;
+	           background-size: cover;
+	           background-position: center center;
 	       }
 
 	       div.backgroundImagePane * {
-	           position: absolute;
+                position: absolute;
 	       }
 	   
 
             div.wrapper {
-	           position: absolute;
+	            position: absolute;
                 z-index: 100;
             }
 
             div.footer {
-	           position: absolute;
-                z-index: 100;
+                position: absolute;
+                z-index: 101;
+            }
+            
+            div.dayTimeIcons {
+                clear: left;
             }
             
             div.mainLink {
@@ -72,6 +88,61 @@ position:fixed;
                 padding-top: 100px; 
             }
             
+
+        #gallery {
+            display: none;
+            position: absolute;
+            top: 50px;
+            bottom: 50px;
+            left: 0px;
+            right: 0px;
+            z-index: 1;            
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
+        #gallery ul {
+            margin: auto;
+            padding-top: 100px
+            padding-bottom: 0px;
+        }
+        
+        #gallery ul li{ 
+            display: inline-block;
+        	margin:13px;
+        	
+        }
+        
+        #gallery ul li img.imageHolder{
+            border:10px solid #a1a1a1;
+        }
+        
+        #gallery ul li img{
+            width:260px !important;
+            height:260px !important;
+            margin:3px;
+        }    
+        
+               
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+         
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.8); 
+            border-radius: 10px;
+        }
+         
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.8); 
+        }        
+        
+        ::-webkit-scrollbar:horizontal {
+            opacity: 0;
+        }
+                    
+
             
 @media only screen and (min-width: 801px) and (max-width: 3000px) {
 
