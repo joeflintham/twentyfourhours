@@ -1,5 +1,5 @@
-define(["dojo/_base/declare", "dojo/dom-construct", "dojo/query", "dojo/dom-attr", "dijit/registry", "dojo/dom-style", "dojo/_base/fx", "24-hours/baseWidget"],
-	function(declare, domConstruct, query, domAttr, registry, domStyle, fx, baseWidget){
+define(["dojo/_base/declare", "dojo/dom-construct", "dojo/query", "dojo/dom-attr", "dijit/registry", "dojo/dom-style", "24-hours/baseWidget"],
+	function(declare, domConstruct, query, domAttr, registry, domStyle, baseWidget){
 	
 	return declare("24-hours.pauseButton", baseWidget, {
 
@@ -24,39 +24,6 @@ define(["dojo/_base/declare", "dojo/dom-construct", "dojo/query", "dojo/dom-attr
             }
 
         },
-
-		_fadeOut: function() {
-	
-			if (this.mouseAnim) { this.mouseAnim.stop(); }
-			
-			this.mouseAnim = fx.animateProperty({
-				node: this.domNode,
-				properties: {
-					opacity: 0,
-				},
-				duration: 1000,
-				onEnd: dojo.hitch(
-				    this,
-				    function(e){
-				        this.detach();
-				      
-				    })
-			}).play();
-		},
-
-		_fadeUp: function() {
-	
-			if (this.mouseAnim) { this.mouseAnim.stop(); }
-			
-			this.mouseAnim = fx.animateProperty({
-				node: this.domNode,
-				properties: {
-					opacity: 1,
-				},
-				duration: 1000
-			}).play();
-		},
-		
 		
 		detach: function(){
             dojo.destroy(this.domNode);

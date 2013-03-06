@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>24 hours at Jonos</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="css/reset_scc.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+            <script>
+            
+                var dojoConfig = {
+                    async: true,
+                    packages: [{
+                        name: "24-hours",
+                        location: location.pathname.replace(/\/[^/]*$/, '') + '/js'
+                    }]
+                };
+            
+            </script>
+
+<!--[if !IE 7]>
+	<style type="text/css">
+		#wrapper {display:table;height:100%}
+	</style>
+<![endif]-->
+
+
+</head>
+
+<body>
+
+        <div class="backgroundImageContainer" data-dojo-type="24-hours/bgImageContainer">
+        
+            <div id="bgImage1" class="backgroundImagePane" data-dojo-type="24-hours/bgImage" imgSrc="bgImages/IMG_1.jpg" imgAlt="An image of Jono's Snooker Club"></div>
+    
+            <div id="bgImage2" class="backgroundImagePane" data-dojo-type="24-hours/bgImage" imgSrc="bgImages/IMG_2.jpg" imgAlt="An image of Jono's Snooker Club"></div>
+            
+            <div id="bgImage3" class="backgroundImagePane" data-dojo-type="24-hours/bgImage" imgSrc="bgImages/IMG_3.jpg" imgAlt="An image of Jono's Snooker Club"></div>
+            
+            <div id="bgImage4" class="backgroundImagePane" data-dojo-type="24-hours/bgImage" imgSrc="bgImages/IMG_4.jpg" imgAlt="An image of Jono's Snooker Club"></div>
+            
+            <div id="bgImage5" class="backgroundImagePane" data-dojo-type="24-hours/bgImage" imgSrc="bgImages/IMG_5.jpg" imgAlt="An image of Jono's Snooker Club"></div>
+    
+        </div>        
+
+<div id="wrapper">
+
+<!--
+<div id="backgroundImageList">
+	<ul>
+    	<li> <img src="images/IMG_1.jpg"/> </li>
+        <li> <img src="images/IMG_2.jpg"/> </li>
+        <li> <img src="images/IMG_3.jpg"/> </li>
+        <li> <img src="images/IMG_4.jpg"/> </li>
+        <li> <img src="images/IMG_5.jpg"/> </li>
+        <!--<li> <img src="images/backgroundImage2.jpg"/> </li>
+    </ul>
+</div> <!--end of backgroundImageList-->
+
+<nav>
+    <div class="mainLink" data-dojo-type="24-hours/mainLink" data-dojo-props="linkName:'Home', clickFunction:'loadHome'"></div> 
+    <div class="mainLink" data-dojo-type="24-hours/mainLink" data-dojo-props="linkName:'About', clickFunction:'loadAbout'"></div> 
+    <div class="mainLink" data-dojo-type="24-hours/mainLink" data-dojo-props="linkName:'Gallery', clickFunction:'loadGallery'"></div>    
+    <div class="mainLink pauseButton" id="pauseButtonContainer"/>
+</nav>
+
+<div data-dojo-type="24-hours/videoContainer" data-dojo-props="videosrc:'media/Jonos_part1comp.mp4',position: '100,100'"></div>
+
+<div class="push"></div>
+
+</div> <!--end of wrapper  -->
+
+<footer>
+
+<div id="daytimeIcons">
+	<ul>
+    	<li><div data-dojo-type="24-hours/transitionButton" data-dojo-props="iconSrc:'icons/icon2.png', refToImage: 'bgImage1', imageCounter:'0'"></div></li>
+    	<li><div data-dojo-type="24-hours/transitionButton" data-dojo-props="iconSrc:'icons/icon3.png', refToImage: 'bgImage2', imageCounter:'1'"></div></li>
+    	<li><div data-dojo-type="24-hours/transitionButton" data-dojo-props="iconSrc:'icons/icon4.png', refToImage: 'bgImage3', imageCounter:'2'"></div></li>
+    	<li><div data-dojo-type="24-hours/transitionButton" data-dojo-props="iconSrc:'icons/icon5.png', refToImage: 'bgImage4', imageCounter:'3'"></div></li>
+    	<li><div data-dojo-type="24-hours/transitionButton" data-dojo-props="iconSrc:'icons/icon1.png', refToImage: 'bgImage5', imageCounter:'4'"></div></li>
+     </ul>
+
+</div><!--end of daytimeIcons -->
+	<!--<h2> <a href="#" > Click to remove contect </a> </h2> -->
+</footer>
+
+
+
+
+		<script src="js/dojo/dojo/dojo.js"></script>
+		<script>
+			require(["dojo/parser", "dojo/ready", "24-hours/bgImage"], function(parser, ready){
+				ready(function(){
+					parser.parse();
+					dojo.query('.videoContainer').forEach(function(){alert(this)})
+				});
+			});
+		</script>
+
+
+
+</body>
+</html>

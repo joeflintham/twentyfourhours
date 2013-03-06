@@ -43,18 +43,6 @@ define(["dojo/_base/declare", "24-hours/baseWidget", "dojo/dom-style", "dojo/_ba
 			}).play();
 		},
 		
-		hide: function(){
-            domStyle.set(this.domNode, "display", "none")
-            domStyle.set(this.domNode, "opacity", "0")
-		},
-		
-		show: function(data){
-            if (data && data.callback) { this.callback = data.callback }
-            domStyle.set(this.domNode, "opacity", "0")
-            domStyle.set(this.domNode, "display", "block")
-            this.transition("1");
-		},
-		
 		forceBehind: function(){
             domStyle.set(this.domNode, "z-index", "1")
 		},
