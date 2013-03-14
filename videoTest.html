@@ -66,8 +66,8 @@
     <div class="mainLink pauseButton" id="pauseButtonContainer"/>
 </nav>
 
-<div data-dojo-type="24-hours/videoContainer" data-dojo-props="videosrc:'media/Jonos_part1comp.mp4',position: '100,100'"></div>
 
+<div id="hook"></div>
 <div class="push"></div>
 
 </div> <!--end of wrapper  -->
@@ -92,10 +92,17 @@
 
 		<script src="js/dojo/dojo/dojo.js"></script>
 		<script>
-			require(["dojo/parser", "dojo/ready", "24-hours/bgImage"], function(parser, ready){
+			require(["dojo/parser", "dojo/ready", "24-hours/bgImage", "24-hours/videoContainer"], function(parser, ready, bgImage, videoContainer){
 				ready(function(){
 					parser.parse();
-					dojo.query('.videoContainer').forEach(function(){alert(this)})
+
+                    
+                    var video = new videoContainer({
+                        videosrc: 'media/Jonos_part1comp.mp4',
+                        position: '100,100'  
+                    })
+				    .placeAt(dojo.byId('hook'));
+                    
 				});
 			});
 		</script>

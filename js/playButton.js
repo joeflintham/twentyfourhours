@@ -11,7 +11,7 @@ define(["dojo/_base/declare", "dojo/dom-construct", "dojo/query", "dojo/dom-attr
 
             if (this.audioController && this.audioController.play) {
     		
-                this._fadeUp();
+                this.inherited(arguments);
     		
     			this.connect(this.playButtonImage, 'onmouseenter', function(e) {
     				this.playButtonImage.style.cursor = "pointer";
@@ -19,7 +19,8 @@ define(["dojo/_base/declare", "dojo/dom-construct", "dojo/query", "dojo/dom-attr
     
     			this.connect(this.playButtonImage, 'onclick', function(e) {
                     this.audioController.play();
-                    this._fadeOut();
+                    //this._fadeOut(this.detach)
+                    this.detach();
     			});
             }
 

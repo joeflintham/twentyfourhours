@@ -1,0 +1,336 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>24 hours at Jonos</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/reset_scc.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+    <style>
+
+        #desktop {
+            
+            position: absolute;
+            top: 50px;
+            bottom: 50px;
+            left: 0px;
+            right: 0px;
+            z-index: 1;            
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
+        #desktop ul {
+            margin: auto;
+            padding-top: 100px
+            padding-bottom: 0px;
+        }
+        
+        #desktop ul li{ 
+            display: inline-block;
+        	margin:13px;
+        	
+        }
+        
+        #desktop ul li img.imageHolder{
+            border:10px solid #a1a1a1;
+        }
+        
+        #desktop ul li img{
+            width:260px !important;
+            height:260px !important;
+            margin:3px;
+        }    
+        
+       
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.8); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.8); 
+}        
+
+::-webkit-scrollbar:horizontal {
+    opacity: 0;
+}
+    </style>
+    
+    <script>
+    
+        var dojoConfig = {
+            async: true,
+            packages: [{
+                name: "24-hours",
+                location: location.pathname.replace(/\/[^/]*$/, '') + '/js'
+            }]
+        };
+    
+    </script>
+
+	<script type="text/javascript" src="fancybox/lib/jquery-1.9.0.min.js"></script>
+
+	
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="fancybox/source/jquery.fancybox.js?v=2.1.4"></script>
+	<link rel="stylesheet" type="text/css" href="fancybox/source/jquery.fancybox.css?v=2.1.4" media="screen" />
+
+<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+        
+            $("#single_image").fancybox({
+                helpers: {
+                    title : {
+                        type : 'float'
+                    }
+                }
+            });
+            
+            
+            $(".various").fancybox({
+                width	: 400,
+                height	: 150,
+                fitToView	: false,
+                autoSize	: false,
+                closeClick	: false,
+                openEffect	: 'elastic',
+                closeEffect	: 'fade'
+            });
+            
+            $(".various1").fancybox({
+                maxWidth	: 1000,
+                maxHeight	: 600,
+                minWidth	: 300,
+                fitToView	: false,
+                width		: '70%',
+                height		: '70%',
+                autoSize	: true,
+                closeClick	: false,
+                openEffect	: 'elastic',
+                closeEffect	: 'fade'
+            });
+            
+            
+            $('.fancybox-media').fancybox({
+                openEffect  : 'none',
+                closeEffect : 'none',
+                helpers : {
+                    media : {}
+                }
+            });
+        
+        });
+        
+    </script>
+
+</head>
+
+<body>
+
+        <div class="backgroundImageContainer" data-dojo-type="24-hours/bgImageContainer">
+        
+            <div id="bgImage1" class="backgroundImagePane" data-dojo-type="24-hours/bgImage" imgSrc="bgImages/IMG_1.jpg" imgAlt="An image of Jono's Snooker Club"></div>
+    
+            <div id="bgImage2" class="backgroundImagePane" data-dojo-type="24-hours/bgImage" imgSrc="bgImages/IMG_2.jpg" imgAlt="An image of Jono's Snooker Club"></div>
+            
+            <div id="bgImage3" class="backgroundImagePane" data-dojo-type="24-hours/bgImage" imgSrc="bgImages/IMG_3.jpg" imgAlt="An image of Jono's Snooker Club"></div>
+            
+            <div id="bgImage4" class="backgroundImagePane" data-dojo-type="24-hours/bgImage" imgSrc="bgImages/IMG_4.jpg" imgAlt="An image of Jono's Snooker Club"></div>
+            
+            <div id="bgImage5" class="backgroundImagePane" data-dojo-type="24-hours/bgImage" imgSrc="bgImages/IMG_5.jpg" imgAlt="An image of Jono's Snooker Club"></div>
+    
+        </div>        
+
+<div id="wrapper">
+
+<!--
+<div id="backgroundImageList">
+	<ul>
+    	<li> <img src="images/IMG_1.jpg"/> </li>
+        <li> <img src="images/IMG_2.jpg"/> </li>
+        <li> <img src="images/IMG_3.jpg"/> </li>
+        <li> <img src="images/IMG_4.jpg"/> </li>
+        <li> <img src="images/IMG_5.jpg"/> </li>
+        <!--<li> <img src="images/backgroundImage2.jpg"/> </li>
+    </ul>
+</div> <!--end of backgroundImageList-->
+
+<nav>
+    <div class="mainLink" data-dojo-type="24-hours/mainLink" data-dojo-props="linkName:'Home'"></div> 
+    <div class="mainLink" data-dojo-type="24-hours/mainLink" data-dojo-props="linkName:'About'"></div> 
+    <div class="mainLink" data-dojo-type="24-hours/mainLink" data-dojo-props="linkName:'Gallery'"></div>    
+    <div class="mainLink pauseButton" id="pauseButtonContainer"/>
+</nav>
+
+<div id="desktop">
+
+
+<ul>
+
+<li><a id="single_image" href="images/jonofin2.jpg" title="">
+	<img src="images/photo1.jpg" alt="Pattern"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/jonosfin.jpg" title="">
+	<img src="images/photo2.jpg" alt="Pattern"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/jonowall.jpg" title="">
+	<img src="images/photo3.jpg" alt="Jono Wall"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/IMG_0398.jpg" title="Snapshots from Jono's">
+	<img src="images/photo4.jpg" alt="Jono's at night" class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/IMG_0409.jpg" title="Outside Jono's">
+	<img src="images/photo5.jpg" alt="Outside Jono's"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/IMG_0408.jpg" title="">
+	<img src="images/photo6.jpg" alt="Snooker club"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/blur.jpg" title="">
+	<img src="images/blur1.jpg" alt="Blur"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/cable.jpg" title="">
+	<img src="images/cable1.jpg" alt="Cable"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/chain.jpg" title="">
+	<img src="images/chain1.jpg" alt="Chain"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/cobweb.jpg" title="">
+	<img src="images/cobweb1.jpg" alt="Coweb"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/development.jpg" title="">
+	<img src="images/development1.jpg" alt="Development"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/flicker.jpg" title="">
+	<img src="images/flicker1.jpg" alt="Flicker"  class="imageHolder"/>
+</a></li>
+
+
+<li><a id="single_image" href="images/fringe.jpg" title="">
+	<img src="images/fringe1.jpg" alt="Fringe"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/game.jpg" title="">
+	<img src="images/game1.jpg" alt="Game"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/gamephoto.jpg" title="">
+	<img src="images/gamephoto1.jpg" alt="Photo of the game"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/guru.jpg" title="">
+	<img src="images/guru1.jpg" alt="Guru"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/jonos.jpg" title="">
+	<img src="images/jonos1.jpg" alt="Snapshot from club 1"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/jonos2.jpg" title="">
+	<img src="images/jonos21.jpg" alt="Snapshot from club 2"  class="imageHolder"/>
+</a></li>
+
+
+<li><a id="single_image" href="images/jonos3.jpg" title="">
+	<img src="images/jonos3.jpg" alt="Snapshot from club 3"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/jonos-students.jpg" title="">
+	<img src="images/jonos-students1.jpg" alt="Student poster"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/lamps.jpg" title="">
+	<img src="images/lamps1.jpg" alt="Lamps"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/outdoors.jpg" title="">
+	<img src="images/outdoors1.jpg" alt="Out Doors"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/pink.jpg" title="">
+	<img src="images/pink1.jpg" alt="Pink"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/pool.jpg" title="">
+	<img src="images/pool1.jpg" alt="Pool"  class="imageHolder"/>
+</a></li>
+
+<li><a id="single_image" href="images/tables.jpg" title="">
+	<img src="images/tables1.jpg" alt="Tables"  class="imageHolder"/>
+</a></li>
+
+
+<!--<li><a class="various fancybox.iframe" data-fancybox-type="iframe" href="iframes/iframe.html">
+	<img src="images/photo2.jpg" alt="image discription"  class="imageHolder"/>
+</a></li>
+
+<li><a class="various1 fancybox.iframe" data-fancybox-type="iframe" href="iframes/iframe2.html"> 
+
+<!--<li><a class="fancybox-media" href="http://vimeo.com/36031564">
+
+<img src="images/video1.jpg" alt="image discription"  class="imageHolder"/>
+
+</a></li>-->
+	
+</ul>
+
+
+</div>
+
+<div class="push"></div>
+
+</div> <!--end of wrapper  -->
+
+<footer>
+
+<div id="daytimeIcons">
+	<ul>
+    	<li><div data-dojo-type="24-hours/transitionButton" data-dojo-props="iconSrc:'icons/icon2.png', refToImage: 'bgImage1', imageCounter:'0'"></div></li>
+    	<li><div data-dojo-type="24-hours/transitionButton" data-dojo-props="iconSrc:'icons/icon3.png', refToImage: 'bgImage2', imageCounter:'1'"></div></li>
+    	<li><div data-dojo-type="24-hours/transitionButton" data-dojo-props="iconSrc:'icons/icon4.png', refToImage: 'bgImage3', imageCounter:'2'"></div></li>
+    	<li><div data-dojo-type="24-hours/transitionButton" data-dojo-props="iconSrc:'icons/icon5.png', refToImage: 'bgImage4', imageCounter:'3'"></div></li>
+    	<li><div data-dojo-type="24-hours/transitionButton" data-dojo-props="iconSrc:'icons/icon1.png', refToImage: 'bgImage5', imageCounter:'4'"></div></li>
+     </ul>
+
+</div><!--end of daytimeIcons -->
+	<!--<h2> <a href="#" > Click to remove contect </a> </h2> -->
+</footer>
+
+
+
+
+		<script src="js/dojo/dojo/dojo.js"></script>
+		<script>
+			require(["dojo/parser", "dojo/ready", "24-hours/bgImage"], function(parser, ready){
+				ready(function(){
+					parser.parse();
+				});
+			});
+		</script>
+
+
+
+</body>
+</html>

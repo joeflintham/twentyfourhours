@@ -25,6 +25,8 @@ define(["dojo/_base/declare", "dojo/dom-construct", "dojo/query", "dojo/dom-attr
             
             this.hideImages()
             this.init()
+            
+            HOURS_REGISTER.bgContainer = this;
         },
         
         hideImages: function(){
