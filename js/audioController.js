@@ -145,7 +145,25 @@ define(["dojo/parser", "dojo/_base/declare", "dojo/dom-construct", "dojo/query",
             }
 
             /* and a list of media files we need to start preloading for smooth playback */
-            /* to do */            
+
+
+            
+            mediaFiles = new Array();
+            getMediaFiles = dojox.json.query('..videosrc');
+            mediaFiles = getMediaFiles(data);
+            
+            for (var a = 0; a < mediaFiles.length; a++){
+                var videoLoader = domConstruct.create(
+                    "video",
+                    {
+                        src: mediaFiles[a],
+                        autoplay: false
+                    }
+                    
+                );
+                console.log(videoLoader)
+            }
+            return;
         },
         
         triggerNextSequence: function(){
