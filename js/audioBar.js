@@ -54,7 +54,8 @@ define(["dojo/_base/declare", "dojo/dom-construct", "dojo/query", "dojo/dom-attr
 		},
 		
 		getTimelineWidth: function(){
-            return (domGeom.position(this.timelineNode)).w		
+            pos = domGeom.position(this.timelineNode);
+            return pos.w		
 		},
 		
 		queueTimelineIcon: function(obj){
@@ -82,7 +83,7 @@ define(["dojo/_base/declare", "dojo/dom-construct", "dojo/query", "dojo/dom-attr
 		},
 		
 		attachTimelineIcons: function(){
-		/*
+
             if (this.iconQueue && this.iconQueue.length > 0){
                 for (a=0; a < this.iconQueue.length; a++){
                     obj = this.iconQueue[a]
@@ -105,7 +106,7 @@ define(["dojo/_base/declare", "dojo/dom-construct", "dojo/query", "dojo/dom-attr
                     }
                 }
             }
-        */
+
 		},
 		
 		resizeTimeline: function(){
