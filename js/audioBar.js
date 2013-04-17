@@ -49,6 +49,7 @@ define(["dojo/_base/declare", "dojo/dom-construct", "dojo/query", "dojo/dom-attr
             
 //            console.log(cursorPos + " : " + timelineWidth + " : " + percentageElapsed)
 //            console.log(this.cursorNode)
+            console.log(cursorPos);
             domStyle.set(this.cursorNode, "width", cursorPos);
 
 		},
