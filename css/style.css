@@ -180,7 +180,7 @@ position:fixed;
                 border-right: 1px solid #aaa;
                 position: relative;
                 height: 42px;
-                margin-top: 1px
+                margin-top: 1px;
                 opacity: 0.6;
                 background: rgba(255,255,255,0.3)
             }
@@ -264,7 +264,7 @@ position:fixed;
 
         #desktop ul {
             margin: auto;
-            padding-top: 100px
+            padding-top: 100px;
             padding-bottom: 0px;
         }
         
