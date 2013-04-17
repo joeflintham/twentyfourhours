@@ -40,6 +40,7 @@ define(["dojo/_base/declare", "dojo/dom-construct", "dojo/query", "dojo/dom-attr
 		},
 		
 		moveCursor: function(){
+        /*
             percentageElapsed = (this.audioController.audioPlayer.getTime() / this.audioController.audioPlayer.getDuration());
  //           console.log(this.audioController.audioPlayer.getTime() + " is " + percentageElapsed + "% of " + this.audioController.audioPlayer.getDuration())
             
@@ -51,7 +52,7 @@ define(["dojo/_base/declare", "dojo/dom-construct", "dojo/query", "dojo/dom-attr
 //            console.log(this.cursorNode)
             console.log(cursorPos);
             domStyle.set(this.cursorNode, "width", cursorPos);
-
+        */
 		},
 		
 		getTimelineWidth: function(){
