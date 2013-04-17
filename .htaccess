@@ -1,2 +1,6 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^media(.*)\/$  http://54.246.75.167/twentyfourhours/twentyfourhours/media/$1 
+
 AddType audio/ogg oga ogg
 AddType video/ogg ogg
