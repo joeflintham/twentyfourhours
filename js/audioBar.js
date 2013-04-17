@@ -40,19 +40,15 @@ define(["dojo/_base/declare", "dojo/dom-construct", "dojo/query", "dojo/dom-attr
 		},
 		
 		moveCursor: function(){
-        /*
+
             percentageElapsed = (this.audioController.audioPlayer.getTime() / this.audioController.audioPlayer.getDuration());
- //           console.log(this.audioController.audioPlayer.getTime() + " is " + percentageElapsed + "% of " + this.audioController.audioPlayer.getDuration())
             
             timelineWidth = this.getTimelineWidth();
 
             cursorPos = (timelineWidth * percentageElapsed) + "px";
             
-//            console.log(cursorPos + " : " + timelineWidth + " : " + percentageElapsed)
-//            console.log(this.cursorNode)
-            console.log(cursorPos);
             domStyle.set(this.cursorNode, "width", cursorPos);
-        */
+
 		},
 		
 		getTimelineWidth: function(){
@@ -86,7 +82,6 @@ define(["dojo/_base/declare", "dojo/dom-construct", "dojo/query", "dojo/dom-attr
 		
 		attachTimelineIcons: function(){
 
-        /*
             if (this.iconQueue && this.iconQueue.length > 0){
                 for (a=0; a < this.iconQueue.length; a++){
                     obj = this.iconQueue[a]
@@ -109,7 +104,7 @@ define(["dojo/_base/declare", "dojo/dom-construct", "dojo/query", "dojo/dom-attr
                     }
                 }
             }
-        */
+
 		},
 		
 		resizeTimeline: function(){
