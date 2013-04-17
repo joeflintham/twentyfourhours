@@ -1,6 +1,6 @@
 {
     audioPlayer: {
-        audiosrc: 'media/Audio_01',
+        audiosrc: 'media/audio_01',
         clipLength: '12:50.063',
         sequence: [
             {
