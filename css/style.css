@@ -335,7 +335,9 @@ position:fixed;
             margin:2% 2.5%;
         }
         
-        
+        .aboutController section article img {
+            padding: 12%;
+        }
         
         
         ::-webkit-scrollbar {
