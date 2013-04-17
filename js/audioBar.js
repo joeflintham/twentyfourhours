@@ -40,8 +40,8 @@ define(["dojo/_base/declare", "dojo/dom-construct", "dojo/query", "dojo/dom-attr
 		},
 		
 		moveCursor: function(){
-            percentageElapsed = (this.audioController.audioPlayer.currentTime / this.audioController.audioPlayer.duration);
- //           console.log(this.audioController.audioPlayer.currentTime + " is " + percentageElapsed + "% of " + this.audioController.audioPlayer.duration)
+            percentageElapsed = (this.audioController.audioPlayer.getTime() / this.audioController.audioPlayer.getDuration());
+ //           console.log(this.audioController.audioPlayer.getTime() + " is " + percentageElapsed + "% of " + this.audioController.audioPlayer.getDuration())
             
             timelineWidth = this.getTimelineWidth();
 
@@ -82,13 +82,14 @@ define(["dojo/_base/declare", "dojo/dom-construct", "dojo/query", "dojo/dom-attr
 		},
 		
 		attachTimelineIcons: function(){
+		/*
             if (this.iconQueue && this.iconQueue.length > 0){
                 for (a=0; a < this.iconQueue.length; a++){
                     obj = this.iconQueue[a]
 
                     objTime = obj.time;
-                    percentAlong = this.convertToTime(obj.time) / this.audioController.audioPlayer.duration;
-                    percentDuration = (obj.duration / 1000) / this.audioController.audioPlayer.duration;
+                    percentAlong = this.convertToTime(obj.time) / this.audioController.audioPlayer.getDuration();
+                    percentDuration = (obj.duration / 1000) / this.audioController.audioPlayer.getDuration();
                     
                     timelineRatio = (42 / this.getTimelineWidth()) * 100;
 
@@ -104,6 +105,7 @@ define(["dojo/_base/declare", "dojo/dom-construct", "dojo/query", "dojo/dom-attr
                     }
                 }
             }
+        */
 		},
 		
 		resizeTimeline: function(){

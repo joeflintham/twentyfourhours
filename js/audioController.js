@@ -1,5 +1,5 @@
-define(["dojo/parser", "dojo/_base/declare", "dojo/dom-construct", "dojo/query", "dojo/dom-attr", "dojo/dom-style", "dijit/registry", "dojox/timing", "dojox/json/query", "24-hours/baseWidget", "24-hours/playButton", "24-hours/pauseButton", "24-hours/muteButton", "24-hours/hideButton", "24-hours/tw_textBox", "24-hours/videoContainer", "24-hours/imageContainer", "24-hours/audioBar", "24-hours/contentWidget", "24-hours/timelineIcon"],
-	function(parser, declare, domConstruct, query, domAttr, domStyle, registry, timing, dojson, baseWidget, playButton, pauseButton, muteButton, hideButton, tw_textBox, videoContainer, imageContainer, audioBar, contentWidget, timelineIcon){
+define(["dojo/parser", "dojo/_base/declare", "dojo/dom-construct", "dojo/query", "dojo/dom-attr", "dojo/dom-style", "dijit/registry", "dojox/timing", "dojox/json/query", "24-hours/baseWidget", "24-hours/playButton", "24-hours/pauseButton", "24-hours/muteButton", "24-hours/hideButton", "24-hours/tw_textBox", "24-hours/videoContainer", "24-hours/imageContainer", "24-hours/audioBar", "24-hours/contentWidget", "24-hours/timelineIcon", "24-hours/audioElement"],
+	function(parser, declare, domConstruct, query, domAttr, domStyle, registry, timing, dojson, baseWidget, playButton, pauseButton, muteButton, hideButton, tw_textBox, videoContainer, imageContainer, audioBar, contentWidget, timelineIcon, audioElement){
 	
 	return declare("24-hours.audioController", contentWidget, {
     
@@ -79,21 +79,10 @@ define(["dojo/parser", "dojo/_base/declare", "dojo/dom-construct", "dojo/query",
 
             if (audioFile){
 
-                this.audioPlayer = dojo.create(
-                "audio",
-                {
-                    src: audioFile,
-                    style: {
-                        visbility: "auto"
-                    },
-                    onended: dojo.hitch(
-                        this,
-                        "reset"
-                    )
-                }
-                );
-                
-                dojo.place(this.audioPlayer, this.audioPlayerNode, "last")
+                this.audioPlayer = new audioElement({
+                    src: audioFile
+                })
+                .placeAt(this.audioPlayerNode)
 
             }
             
@@ -156,12 +145,19 @@ define(["dojo/parser", "dojo/_base/declare", "dojo/dom-construct", "dojo/query",
                 var videoLoader = domConstruct.create(
                     "video",
                     {
-                        src: mediaFiles[a],
+                        src: mediaFiles[a]+".mp4",
                         autoplay: false
                     }
                     
                 );
-                console.log(videoLoader)
+                var videoLoader = domConstruct.create(
+                    "video",
+                    {
+                        src: mediaFiles[a]+".ogg",
+                        autoplay: false
+                    }
+                    
+                );
             }
             return;
         },
@@ -263,10 +259,10 @@ define(["dojo/parser", "dojo/_base/declare", "dojo/dom-construct", "dojo/query",
         
         checkElapsedTime: function(){
 
-            //console.log(this.nextTrigger + " : " + this.audioPlayer.currentTime);
+            //console.log(this.nextTrigger + " : " + this.audioPlayer.getTime());
             
-            if (this.audioPlayer && this.audioPlayer.currentTime && this.nextTrigger){
-                if (this.audioPlayer.currentTime >= this.nextTrigger){
+            if (this.audioPlayer && this.audioPlayer.getTime() && this.nextTrigger){
+                if (this.audioPlayer.getTime() >= this.nextTrigger){
                     this.triggerNextSequence();
                 }
             }
@@ -359,7 +355,7 @@ define(["dojo/parser", "dojo/_base/declare", "dojo/dom-construct", "dojo/query",
                         this.nextTrigger = this.convertToTime(this.triggerTimes[which])
                     }
                 }
-                this.audioPlayer.currentTime = targetTime;
+                this.audioPlayer.movePlayHeadTo(targetTime);
                 this.play();
             }
             

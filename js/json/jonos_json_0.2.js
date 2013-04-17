@@ -1,6 +1,6 @@
 {
     audioPlayer: {
-        audiosrc: 'media/jonos-final.mp3',
+        audiosrc: 'media/Audio_01',
         clipLength: '12:50.063',
         sequence: [
             {
