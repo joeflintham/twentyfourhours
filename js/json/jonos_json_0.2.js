@@ -48,7 +48,7 @@
                 events: [
                     {
                         type: "videoContainer",
-                        videosrc: 'media/jonos_part1comp.mp4',
+                        videosrc: 'media/movie_01',
                         position: '40,10%',
                         duration: '99000'
                     }
@@ -99,7 +99,7 @@
                 events: [
                     {
                         type: "videoContainer",
-                        videosrc: 'media/part2_jonos.mp4',
+                        videosrc: 'media/movie_02',
                         position: '40,40%',
                         duration: '83000'
                     }
@@ -140,7 +140,7 @@
                 events: [
                     {
                         type: "imageContainer",
-                        imagesrc: 'media/game.jpg',
+                        imagesrc: 'media/image_01.jpg',
                         position: '20,25%',
                         duration: 12000
                     }
@@ -181,7 +181,7 @@
                 events: [
                     {
                         type: "videoContainer",
-                        videosrc: 'media/part3_jonos.mp4',
+                        videosrc: 'media/movie_01',
                         position: '40,60%',
                         duration: '81000'
                     }
