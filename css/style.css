@@ -404,4 +404,23 @@ position:fixed;
         height:	35px !important;
     }
     	
-    
+@media (max-width: 480px) {
+
+div.hideButtonContainer {
+    display: none;
+}
+
+body div.audioBarContainer .videoContainer {
+    height: auto;
+    width: 100% !important;
+}
+
+body div.audioBarContainer .videoContainer .videoBox {
+    height: auto !important;
+}
+
+div.videoBoxContainer {
+    left: 1% !important;
+}
+
+}    
