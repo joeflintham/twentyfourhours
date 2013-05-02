@@ -5,11 +5,16 @@ define(["dojo/_base/declare", "dojo/dom-construct", "dojo/query", "dojo/dom-attr
 
         src: '',
         onended: '',
-        
+            refToBar: '',
+
 		templateString: dojo.cache("24-hours.audioElement", "../templates/audioelement.html"),
 		
 		play: function(){
-            this.audioElementNode.play();
+		    if (navigator.userAgent.toLowerCase().indexOf("android") > -1 && (!this.audioElementNode.src)){
+			this.audioElementNode.src = this.src + ".mp3";
+			if (this.refToBar && this.refToBar.resizeTimeline) { this.refToBar.resizeTimeline(); }
+		    }
+		    this.audioElementNode.play();
 		},
 
 		pause: function(){

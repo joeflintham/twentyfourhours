@@ -14,8 +14,7 @@ define(["dojo/_base/declare", "dojo/dom-construct", "dojo/query", "dojo/dom-attr
         },
         
         locate: function(pos, width){
-            console.log(pos)
-            if (pos) domStyle.set(this.domNode, "left", pos);
+            if (pos) domStyle.set(thi s.domNode, "left", pos);
             if (width) domStyle.set(this.domNode, "width", width);
             this.placed = true;
         }

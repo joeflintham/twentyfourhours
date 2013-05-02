@@ -92,16 +92,21 @@ define(["dojo/_base/declare", "dojo/dom-construct", "dojo/query", "dojo/dom-attr
                     
                     timelineRatio = (42 / this.getTimelineWidth()) * 100;
 
-                    horPos = ((percentAlong * 100) - (timelineRatio)) + "%";
-                    iconWidth = (this.getTimelineWidth() * percentDuration) + "px";
-                    
-                    //console.log(iconWidth + " : " + percentDuration + " : " + percentAlong + " : " + this.getTimelineWidth());
-                    
-                    if (!obj.placed){
-                        domConstruct.place(obj.domNode, this.timelineNode, "last");
-                        if (obj.locate) { obj.locate(horPos, iconWidth); }
-                        obj._fadeUp()
-                    }
+		    
+		    if (!(isNaN(percentAlong)) || (isNaN(timelineRatio))){
+
+			horPos = ((percentAlong * 100) - (timelineRatio));
+			horPos = horPos + "%";
+			iconWidth = (this.getTimelineWidth() * percentDuration) + "px";
+			
+			//console.log(iconWidth + " : " + percentDuration + " : " + percentAlong + " : " + this.getTimelineWidth());
+			
+			if (!obj.placed){
+                            domConstruct.place(obj.domNode, this.timelineNode, "last");
+                            if (obj.locate) { obj.locate(horPos, iconWidth); }
+                            obj._fadeUp()
+			}
+		    }
                 }
             }
 

@@ -79,8 +79,13 @@ define(["dojo/parser", "dojo/_base/declare", "dojo/dom-construct", "dojo/query",
 
             if (audioFile){
 
+		this.audioBar = new audioBar({audioController: this})
+		    .placeAt(this.audioBarAttachPoint);
+
                 this.audioPlayer = new audioElement({
-                    src: audioFile
+                    src: audioFile,
+		    refToBar: this.audioBar
+
                 })
                 .placeAt(this.audioPlayerNode)
 
@@ -88,9 +93,6 @@ define(["dojo/parser", "dojo/_base/declare", "dojo/dom-construct", "dojo/query",
             
             this.pause();
             
-            this.audioBar = new audioBar({audioController: this})
-            .placeAt(this.audioBarAttachPoint);
-
             this.preFetch(data);
         },
         
@@ -283,6 +285,7 @@ define(["dojo/parser", "dojo/_base/declare", "dojo/dom-construct", "dojo/query",
                 }
                 this.audioPlayer.play();
 
+		
                 /*
                 if (!this.myMuteButton){
                     this.myMuteButton = new muteButton({audioController: this}).placeAt(
