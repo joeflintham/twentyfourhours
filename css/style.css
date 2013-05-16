@@ -46,7 +46,7 @@ position:fixed;
             
             div.backgroundImageContainer{
 	           position: absolute;
-                z-index: -1;
+                   z-index: -1;
 	           width: 100%;
 	           height: 100%;
             }
@@ -410,17 +410,57 @@ div.hideButtonContainer {
     display: none;
 }
 
-body div.audioBarContainer .videoContainer {
+div.mediaContainer {
+ margin: 0px;
+}
+body div.audioBarContainer .videoContainer, body div.audioBarContainer .imageContainer {
     height: auto;
     width: 100% !important;
+    text-align: center;
 }
 
 body div.audioBarContainer .videoContainer .videoBox {
     height: auto !important;
+    width: 90% !important;
 }
 
-div.videoBoxContainer {
-    left: 1% !important;
+div.videoBoxContainer  {
+    left: 5% !important;
 }
 
+div.imageContainer {
+    left: 0% !important;
+}
+div.audioBarContainer .imageContainer img {
+    width: 90%;
+}
 }    
+
+@media (max-width: 400px){
+    nav#mainMenu div.mainLink a {
+	font-size: 1.2em;
+	margin: 0px 5px;
+    }
+    #daytimeIcons {
+	text-align: center;
+    }
+    #daytimeIcons ul {
+	display: auto;
+	width: 300px;
+	margin: auto;
+    }
+    #daytimeIcons ul li {
+	display: table-cell;
+	padding-top: 5px;
+    }
+    #daytimeIcons ul li a {
+	padding: 5px 0px;
+	float: none;
+    }
+    div#contentHook .tw_textBox {
+	top: 0px;
+	font-size: 1em;
+	right: 0px;
+	padding: 5px;
+    }
+}
